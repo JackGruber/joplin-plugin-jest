@@ -1,0 +1,12 @@
+{
+	"manifest_version": 1,
+	"id": "io.github.jackgruber.jest",
+	"app_min_version": "1.8",
+	"version": "1.0.0",
+	"name": "Jest examples for development",
+	"description": "Jest examples for development",
+	"author": "JackGruber",
+	"homepage_url": "",
+	"repository_url": "",
+	"keywords": []
+}
