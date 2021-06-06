@@ -1,4 +1,4 @@
-import joplin from "api";
+import joplin from "../api";
 
 export async function getDoubleNumber(): Promise<number> {
     const value = await joplin.settings.value("number");
@@ -7,6 +7,11 @@ export async function getDoubleNumber(): Promise<number> {
 
 export async function getNumber(): Promise<number> {
     return await joplin.settings.value("number");
+}
+
+export async function testDate() {
+    const now = new Date(Date.now());
+    return now.getTime();
 }
 
 export async function getText(): Promise<string> {
