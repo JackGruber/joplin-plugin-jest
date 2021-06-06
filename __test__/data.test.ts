@@ -24,7 +24,19 @@ describe("Mock", function () {
         };
         mockedAxios.get.mockResolvedValue(mockedResponse);
     });
-    it("returns name successfully", async () => {
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
+    it("Test 1", async () => {
+        expect(axios.get).not.toHaveBeenCalled();
+        const actual = await fetch();
+        expect(actual.data.name).toBe("Henry");
+        expect(axios.get).toHaveBeenCalled();
+    });
+
+    it("Test 2", async () => {
         expect(axios.get).not.toHaveBeenCalled();
         const actual = await fetch();
         expect(actual.data.name).toBe("Henry");
